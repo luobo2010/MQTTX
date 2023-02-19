@@ -76,6 +76,7 @@ const benchConn = async (options: BenchConnectOptions) => {
 
       opts.clientId = clientId.includes('%i') ? clientId.replaceAll('%i', i.toString()) : `${clientId}_${i}`
 
+      
       const client = mqtt.connect(opts)
 
       interactive.await('[%d/%d] - Connecting...', connectedCount, count)
