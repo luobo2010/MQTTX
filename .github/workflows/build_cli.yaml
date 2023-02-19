@@ -1,12 +1,9 @@
 name: build cli
 
 on:
-  pull_request:
-    paths:
-      - 'cli/**'
-  release:
-    types:
-      - published
+ push:
+   branches:
+     - main
 
 jobs:
   build_packages:
